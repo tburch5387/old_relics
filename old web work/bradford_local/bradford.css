@@ -1,0 +1,547 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*basic all pages styles*/
+html {
+	padding:0px;
+	margin:0px;
+}
+
+body {
+	margin:0px;
+	padding:0px;
+	background-color:#003;
+	background-image:url(media/texture.png);
+}
+
+@font-face {
+    font-family: 'DancingScriptOTRegular';
+    src: url('fonts/DancingScript-Regular-webfont.eot');
+    src: url('fonts/DancingScript-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/DancingScript-Regular-webfont.woff') format('woff'),
+         url('fonts/DancingScript-Regular-webfont.ttf') format('truetype'),
+         url('fonts/DancingScript-Regular-webfont.svg#DancingScriptOTRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+#heading {
+	margin-left:auto;
+	margin-right:auto;
+	font-size:2.5em;
+	font-family:DancingScriptOTRegular;
+	text-align:left;
+	width:100%;
+	padding-bottom:15px;
+	background-image:url(media/header.jpg);
+}
+
+#heading p {
+	position:absolute;
+	color:#FFF;
+	text-shadow:1px 1px #333;
+	top:20px;
+	width:500px;
+	left:145px;
+	padding-left:5px;
+	
+}
+
+#heading img {
+	margin-left:25px;
+	margin-top:10px;
+
+}
+
+
+#navBar {
+	overflow:hidden;
+	width:100%;
+	background-color:#C00;
+	border-top:2px solid #900;
+	border-bottom:1px double #900;
+	margin-bottom:5px;
+	
+}
+
+#nav {
+	width:1000px;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:10px;
+	padding-left:5px;
+		
+	background-color:#C00;
+	text-align:center;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#nav li {
+	float:left;
+	text-shadow:1px 1px #333;
+	display:inline;
+	font-size:.9em;
+	padding-left:6px;
+	padding-right:6px;
+	text-transform:capitalize;
+	
+}
+
+#nav li a {
+	padding:2px;
+	background-color:#C00;
+	text-decoration:none;
+	color:#FFF;
+}
+
+#nav li a:visited {
+	color:#fff;
+}
+
+#nav li a:hover {
+	text-decoration:none;
+	color:#FFFFFF;
+	background-color:#009;
+}
+
+#nav li a:active { /*make it work for link thing*/
+	text-decoration:none;
+	color:white;
+	backround-color:#C00;
+}
+
+#drop1
+{	position:absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #003;
+	z-index:10;
+}
+
+#drop2 {	
+	position:absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #003;
+	z-index:10;
+}
+#nav div a {	
+		position: relative;
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background:#C00;
+		color:#FFF;
+		font-size:.85em;
+	}
+
+#nav div a:hover {	
+		background: #006;
+		color: #FFF}
+
+
+.shadow {
+  -moz-box-shadow:    0px 6px 7px 2px #000;
+  -webkit-box-shadow: 0px 6px 7px 2px #000;
+  box-shadow:         0px 6px 7px 2px #000;
+}
+
+
+
+
+#photoShow {
+	width:800px;
+	height:300px;
+	border:1px solid;
+	margin-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0px;
+}
+
+#photoShow ul {  
+	margin: 0;  
+	padding: 0;  
+ 	list-style-type: none;  
+ 	height: 1%; /* IE fix */}  
+   
+#photoShow ul:after {  
+	content: ".";  
+ 	clear: both;  
+	display: block;  
+	height: 0;  
+	visibility: hidden;}              
+
+/* ---------------------------------------------------- */  
+/* SLIDESHOW > SLIDES 
+/* ---------------------------------------------------- */  
+#photoShow .slides {  
+	overflow: hidden; 
+	width: 800px;}  
+   
+#photoShow .slides ul {  
+ 	width: 2400px;}  
+
+#photoShow .slides li { 
+	width: 800px;  
+	float: left;  
+	padding: 0px;}  
+  
+ 
+/* ---------------------------------------------------- */  
+/* SLIDESHOW > NAVIGATION 
+/* ---------------------------------------------------- */  
+#photoShow .slides-nav {  
+background-color:#009;  
+color:#CCC;
+}  
+   
+#photoShow .slides-nav li {  
+	float: left;
+	list-style-type:none;
+	}  
+	
+   
+#photoShow .slides-nav li a {  
+	display: block;  
+	padding: 5px 10px;  
+	outline: none;
+	color:#36F;
+	text-decoration:none;
+	
+	}  
+#photoShow .slides-nav li a:hover {
+	background-color:#009;
+	color:#FFF;
+	text-decoration:none;
+}
+
+#mainContent {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	clear:both;
+	overflow:hidden;
+	width:800px;
+	margin-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	background-color:white;
+	padding:0px;
+	padding-bottom:50px;
+	border-top:2px solid #006;
+}
+
+#headshot {
+	width:200px;
+	margin-left:15px;
+}
+
+.content {
+	margin:0px;
+	float:left;
+	background-color:#FFFFFF;
+	width:55%;
+	padding:15px;
+	padding-bottom:25px;
+	
+}
+
+feedburnerFeedBlock li{
+	list-style:disc;
+	text-align:left;
+	padding:4px;
+}
+
+.feedburnerFeedBlock p {
+	padding-bottom: 20px;
+}
+
+.feedburnerFeedBlock li{
+	margin-left: -20px;
+}
+	
+.content a {
+	text-decoration:underline;
+	color:#0000FF;
+}
+
+.content a:visited {
+	color:#00C;
+}
+.content a:hover {
+	color:#CC0000;
+	text-decoration:underline;
+}
+
+#sideBar {
+	margin-right:35px;
+	margin-top:40px;
+	float:right;
+	width:35%; 
+	background-color:#CCC;
+	border:1px dashed #990000;
+	-moz-border-radius:15px;
+	border-radius:15px;
+}
+
+
+#sideBar a {
+	text-decoration:underline;
+	color:#0000FF;	
+}
+
+#sideBar img {
+	border:none;
+}
+.fix a {
+	text-decoration:none;
+}
+
+
+#sideBar a:visited {
+	color:#00C;
+}
+#sideBar a:hover {
+	color:#CC0000;
+	text-decoration:underline;
+}
+.sideHead {
+	text-align:center;
+}
+
+#footer {
+	clear:both;
+	width:100%;
+	border-top:4px solid #600;
+	text-align:center;
+	text-shadow:1px 1px #333;
+	color:#FFF;
+	background-image:url(media/footer.jpg);
+	background-color:#C00;
+	padding-bottom:2px;
+	font-size:.85em;
+}
+
+#footer li {
+	
+	display:inline;
+	padding-left:4px;
+	padding-right:4px;
+}
+
+#footer ul { 
+	text-align:center;
+	margin-right:20px;
+}
+
+#footer li a {
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+#footer img {
+}
+
+/*styles for chart page*/
+
+#pollAndReps table {
+	margin:0px;
+	border: 1px solid #006;
+	color:#006;
+
+	
+}
+#pollAndReps {
+	padding:5px;
+	color:#006;
+}
+#pollAndReps td,th {
+	border: 1px solid #006;
+	margin:0px;
+	
+}
+
+.color1 {
+	background-color:#FFC;
+}
+
+#pollAndReps td {padding-left:2px;
+
+}
+
+/*styles for contact/involvment pages*/
+.content form {padding: 15px;
+}
+
+.typeBox {
+	padding:3px;
+	background-color:#CCC;
+	border:2px groove #999;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	margin:2px;
+	margin-left:0px;
+}
+
+.typeBox:focus {
+	background-color:white;
+}
+
+#contact textarea {
+	overflow-y:scroll;
+}
+
+#submit {
+	margin-top:15px;
+}
+
+#submit:hover {
+	background-color:#006;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	color:white;
+	
+}
+
+.textfieldRequiredMsg {display:none;} 
+.textfieldInvalidFormatMsg {display:none;}
+.textfieldMinValueMsg,
+.textfieldMaxValueMsg,
+.textfieldMinCharsMsg,
+.textfieldMaxCharsMsg,
+.textfieldValidMsg {
+	display: none;
+}
+
+/* These selectors change the way messages look when the widget is in one of the error states.
+ * These classes set a default red border and color for the error text.
+ * The state class (e.g. .textfieldRequiredState) is applied on the top-level container for the widget,
+ * and this way only the specific error message can be shown by setting the display property to "inline".
+ */
+.textfieldRequiredState .textfieldRequiredMsg, 
+.textfieldInvalidFormatState .textfieldInvalidFormatMsg, 
+.textfieldMinValueState .textfieldMinValueMsg,
+.textfieldMaxValueState .textfieldMaxValueMsg,
+.textfieldMinCharsState .textfieldMinCharsMsg,
+.textfieldMaxCharsState .textfieldMaxCharsMsg
+{
+	display: inline;
+	color: #C00;
+	border: 1px solid #CC3333;
+}
+
+/*styles for thankyou */
+
+#thanks {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding:0px;
+}
+
+#thanks a {
+	text-decoration:none;
+}
+
+#thanks a:visited {
+	color:#009;
+}
+#thanks a:hover {
+	color:#CC0000;
+	text-decoration:underline;
+}
+
+#thanks h4 {
+	padding-bottom:15px;
+}
+
+#thanks img {
+	border:none
+}
+
+/*styles for links page*/
+#links {
+	margin:50px;
+}
+
+#links a {
+	text-decoration:underline;
+	color:#0000FF;
+}
+
+#links a:visited {
+	color:#006;
+}
+#links a:hover {
+	color:#CC0000;
+	text-decoration:underline;
+}
+
+li {list-style-type:circle;}
+
+/* styles for reps page*/
+
+.reps {
+	margin-left: 20px;}
+	
+.hasBio {
+	float:right;
+	margin:5px;
+	border:1px solid #CCC;
+}
+
+.noBio {
+	float:none;
+	margin:5px;
+	border:1px solid #CCC;
+}
+
+#sectionNav {
+	background-color:#C00;
+	font-size:.75em;
+	margin-top:0px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:5px;
+	padding-top:5px;
+	text-align:center;
+}
+
+#sectionNav {
+	border-top:2px solid #006;
+}
+
+#sectionNav li {
+	display:inline;
+	padding:4px;
+}
+
+
+#sectionNav li a {
+	background-color:#C00;
+	text-decoration:none;
+	color:#FFF;
+}
+
+#sectionNav li a:visited {
+	color:#fff;
+}
+
+#sectionNav li a:hover {
+	text-decoration:none;
+	color:#FFFFFF;
+	background-color:#009;
+}
+
+#sectionNav li a:active { /*make it work for link thing*/
+	text-decoration:none;
+	color:white;
+	backround-color:#C00;

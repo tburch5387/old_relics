@@ -1,0 +1,4 @@
+[19-Jan-2012 16:32:15] PHP Warning:  Invalid argument supplied for foreach() in /home2/east6287/public_html/involvment_mailer.php on line 13
+[19-Jan-2012 16:32:15] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/east6287/public_html/involvment_mailer.php:13) in /home2/east6287/public_html/involvment_mailer.php on line 31
+[19-Jan-2012 16:40:44] PHP Warning:  Invalid argument supplied for foreach() in /home2/east6287/public_html/involvment_mailer.php on line 13
+[19-Jan-2012 16:40:44] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/east6287/public_html/involvment_mailer.php:13) in /home2/east6287/public_html/involvment_mailer.php on line 31

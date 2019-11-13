@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="shortcut icon" href="favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Calendar</title>
+<link href="bradford.css" rel="stylesheet" type="text/css"/><!--style sheet-->
+<script src="javastuff.js" type="text/javascript"></script>
+<script src="jquerylib.js" type="text/javascript"></script>
+<script src="jquery.cycle.js" type="text/javascript"></script>
+<script src="slideshow.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="heading">
+        <div><img src="media/bradfordele.png"/>
+        </div>
+        <p>East & West Bradford GOP</p>
+        </div>
+
+
+    <div id="navBar">
+    	<ul id="nav">
+       <li class="navButtons"><a href="index.html">News</a>
+            </li> 
+        	<li class="navButtons"><a href="greetings.html">Welcome</a>
+            </li>
+            <li class="navButtons"><a href="committeeReps.html" onmouseover="mopen('drop1')" onmouseout="mclosetime()">Committee People</a>
+            	<div id="drop1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="whatiscommittee.html">What is a Committee Person</a>
+                <a href="committeeReps.html">Your Committee Representatives</a>
+                </div>
+             </li>   
+            <li class="navButtons"><a href="repChart.html">Your Representatives</a>
+            </li>
+            <li class="navButtons"><a href="repChart.html">Polling Locations</a>
+            </li>
+            <li class="navButtons"><a href="calendar.html">Calendar</a>
+            </li> 
+            <li class="navButtons"><a href="contactForm.html" onmouseover="mopen('drop2')" onmouseout="mclosetime()">Get Involved</a>
+            	<div id="drop2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="contactForm.html">Contact Us</a>
+                <a href="involvment.html">Get Involved</a>
+                </div>
+            </li>
+            <li class="navButtons"><a href="links.html">Links</a>
+            </li>
+           
+       </ul>
+       <div style="clear:both"></div>
+	</div>
+ 
+ 
+ 
+ <div id="photoShow">
+             <div class="slides">  
+                 <ul>  
+                     <li id="photo1">  
+                         <img src="media/example.jpg" alt="Photo"/>
+                     </li>  
+                     <li id="photo2">  
+                         <img src="media/example2.jpg" alt="Photo"/>
+                     </li>  
+                     <li id="photo3">  
+                         <img src="media/example3.jpg" alt="Photo"/>
+                     </li>  
+                 </ul>  
+             </div>  
+             <ul class="slides-nav">  
+                 <li><a href="#photo1">Photo one</a></li>  
+                 <li><a href="#photo2">Photo two</a></li>  
+                 <li><a href="#photo3">Photo three</a></li>  
+             </ul>    
+		</div>
+	<div id="mainContent" class="shadow">
+		
+       
+		<iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=east.westbradfordgop%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	</div>
+<div id="footer">
+<ul id="subNav">
+        	<li class="subButtons"><a href="greetings.html">Welcome</a>
+            </li>
+            <li class="subButtons"><a href="committeeReps.html">Your Committee People</a>
+            </li> 
+            <li class="subButtons"><a href="repChart.html">Your Representatives</a>
+            </li>
+           <li class="subButtons"><a href="index.html">News</a>
+            </li> <!--wordpress-->
+            <li class="subButtons">Calendar
+            </li> <!--wordpress-->
+            <li class="subButtons"><a href="contactForm.html">Contact</a>
+            </li>
+            <li class="subButtons"><a href="links.html">Links</a>
+            </li>
+       </ul>
+<img src="media/gopelephant.png"/>
+<p>&copy; 2012 East and West Bradford GOP</p>
+</div>
+
+</body>
+</html>

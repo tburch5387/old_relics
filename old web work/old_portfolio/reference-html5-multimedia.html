@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang=en>
+<head>
+<title>HTML5 Rich Media</title>
+<meta charset=UTF-8 />
+<script type="text/javascript">
+<!--
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] < 4.0) {
+		var myiOSVideoPosterFix = document.getElementsByTagName("video");
+		myiOSVideoPosterFix.removeAttribute("poster");
+	}
+//-->
+</script>
+</head>
+<body>
+<h1>=HTML5 Rich Media Reference</h1>
+<ul>
+	<li><a href="http://bit.ly/34vmlV">Dive Into HTML5: Video on the Web</a></li>
+	<li><a href="http://bit.ly/82qZMr">Video for Everyone</a></li>
+	<li><a href="http://bit.ly/dr3Cfk">HTML5 Audio and Video: What you Must Know</a></li>
+	<li><a href="http://bit.ly/9aGHas">JW Player</a></li>
+	<li><a href="http://bit.ly/tcbgYe">Live sample of this page</a></li>
+</ul>
+
+<hr />
+
+<h2>&lt;video&gt; Element</h2>
+<!-- Modded from "Video For Everybody" v0.4.1 by Kroc Camen of Camen Design <camendesign.com/code/video_for_everybody>
+     =================================================================================================================== -->
+<!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise       -->
+<!-- warning: playback does not work on iPad/iPhone running iOS3 if you include the poster attribute!                    -->
+<!-- poster attribute fixed in iOS4.0, coming to iPad in Nov 2010  + http://www.apple.com/ipad/software-update/          -->
+<video width="320" height="240" controls poster="multimedia/SuperFriends1973.jpg">
+  <!-- WebKit video: Safari/Chrome : MP4 must be first for iPad/iPhone! -->
+  <source src="multimedia/SuperFriends1973.mp4" type="video/mp4" />
+  <!-- Gecko video: Firefox / Opera -->
+  <source src="multimedia/SuperFriends1973.ogv" type="video/ogg" />
+  <!-- IE9+ -->
+  <source src="multimedia/SuperFriends1973.webm" type="video/webm" />
+  <!-- fallback to Flash for IE<9 -->
+  <object width="320" height="240" type="application/x-shockwave-flash" data="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/player.swf">
+    <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+    <param name="movie" value="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/player.swf" />
+    <param name="flashvars" value="controlbar=over&amp;image=multimedia/SuperFriends1973.jpg&amp;file=SuperFriends1973.flv" />
+    <!-- Total Fail: fallback image. note the alt field below, put the title of the video there -->
+    <img src="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/SuperFriends1973.jpg" width="320" height="240" alt="Super Firends circa 1973"
+		     title="Your browser has no HTML5 video playback capabilities, please download the video below" />
+    <!-- you should offer a download link as they may be able to play the file locally. -->
+    <p><strong>Your browser has no HTML5 video playback capabilities, please download the video below:</strong></p>
+    <ul>
+      <li>Closed Format: <a href="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/SuperFriends1973.mp4">"H.264 .mp4"</a></li>
+      <li>Open Format: <a href="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/SuperFriends1973.ogv">"Theora .ogv"</a></li>
+    </ul>
+  </object>
+</video>
+<!-- javascript below helps playability on most Androids -->
+<script>
+  var v = document.getElementById("movie");
+  v.onclick = function() {
+    if (v.paused) {
+      v.play();
+    } else {
+      v.pause();
+    }
+  });
+</script>
+
+<hr />
+
+<h2>&lt;audio&gt; Element</h2>
+<audio controls>
+	<source src="multimedia/SuperFriends1973.mp3" type="audio/mpeg" />
+    <source src="multimedia/SuperFriends1973.ogg" type="audio/ogg" />
+    <!-- fallback to Flash for IE<9 -->
+    <object width="320" height="24" type="application/x-shockwave-flash" data="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/player.swf">
+    <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+    <param name="movie" value="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/player.swf" />
+    <param name="flashvars" value="file=multimedia/SuperFriends1973.mp3" />
+    <p><strong>No audio playback capabilities, please download the audio below:</strong></p>
+    <ul>
+      <li>Closed Format: <a href="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/SuperFriends1973.mp3">".mp3"</a></li>
+      <li>Open Format: <a href="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/SuperFriends1973.ogg">"Theora .ogg"</a></li>
+    </ul>
+  </object>
+</audio>
+
+<hr />
+
+<h2>&lt;embed&gt; Adobe Flash .swf Files</h2>
+<embed src="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/justiceleague.swf" type="application/x-shockwave-flash" width="550" height="400" alt="requires adobe flash" />
+
+<hr />
+
+<h2>&lt;object&gt;</h2>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" type="application/x-shockwave-flash" data="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/justiceleague.swf" width="550" height="400">
+<!-- W3C Validator gives 1 validation error, stating: The classid attribute on the object element is obsolete. 
+    yet on http://www.w3schools.com/media/media_object.asp they show it in use, go figure. -->
+  <param name="movie" value="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/justiceleague.swf" />
+        		<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/justiceleague.swf" width="550" height="400">
+				<!--<![endif]-->
+				<div>
+            <p>This sample requires the Adobe Flash Player plugin. Below is an image from the piece.</p>
+					<img src="file:///Macintosh HD/Users/tb564/Downloads/240-w07-Materials 2/multimedia/justiceleague.png" alt="The Justice League" title="The Justice League" width="550" height="400" />
+    <p><a href="http://adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+				</div>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+    
+</body>
+</html>
